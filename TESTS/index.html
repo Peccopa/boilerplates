@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heavy Engineering — Инжиниринговая компания</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Segoe UI', Roboto, sans-serif;
+        color: #fff;
+        background: url('bg-2.jpeg') no-repeat center center fixed; /* локальный файл bg.jpg */
+        background-size: cover;
+      }
+
+      header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.8rem 2rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 1.5rem;
+      }
+
+      nav {
+        padding-right: 3rem;
+      }
+
+      nav a {
+        color: #fff;
+        margin-left: 1.5rem;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+
+      nav a:hover {
+        color: #00bfff;
+      }
+
+      section {
+        background: rgba(0, 0, 0, 0.9);
+        margin: 6rem auto 2rem auto;
+        padding: 1.5rem;
+        max-width: 900px;
+        border-radius: 12px;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+      }
+
+      h2 {
+        border-bottom: 2px solid #999;
+        padding-bottom: 0.4rem;
+        margin-bottom: 1rem;
+        font-size: 1.4rem;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+      }
+
+      p,
+      li {
+        line-height: 1.6;
+        font-size: 1rem;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 1.2rem;
+      }
+
+      footer {
+        text-align: center;
+        padding: 2rem 0;
+        font-size: 0.9rem;
+        color: #ccc;
+        margin-top: 2rem;
+      }
+
+      @media (max-width: 600px) {
+        header {
+          flex-direction: column;
+          text-align: center;
+        }
+        nav a {
+          margin: 0.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Heavy Engineering</h1>
+      <nav>
+        <a href="#about">О компании</a>
+        <a href="#mission">Миссия</a>
+        <a href="#projects">Проекты</a>
+        <a href="#news">Новости</a>
+        <a href="#certificates">Сертификаты</a>
+        <a href="#directions">Направления</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+    </header>
+
+    <section id="about">
+      <h2>О компании</h2>
+      <p>
+        Мы — российская инжиниринговая компания, осуществляющая деятельность в
+        химической и нефтехимической промышленностях, а также в других сферах.
+        Наши компетенции — команда квалифицированных инженеров и экспертов с
+        уникальным многолетним опытом работы в передовых зарубежных и российских
+        компаниях — признанных лидерах производителей оборудования химических
+        отраслей.
+      </p>
+      <p>
+        В партнёрстве с производителями химического сегмента рынка мы
+        предоставляем широкий спектр инжиниринговых услуг, а также сервис,
+        подбор и поставку оборудования.
+      </p>
+    </section>
+
+    <section id="mission">
+      <h2>Наша задача / Миссия</h2>
+      <p>
+        Мы представляем самые современные технологии и самый широкий спектр
+        сервиса своему заказчику.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>Реализованные проекты</h2>
+      <ul>
+        <li>
+          Поставка катализатора на ЕВРОХИМ (БМУ, КА-5 — 5 полок, объём ...)
+        </li>
+        <li>ФОСФОРИТ — КА-... (данные уточняются)</li>
+      </ul>
+    </section>
+
+    <section id="news">
+      <h2>Новости</h2>
+      <p>Новый контракт 2025 года с компанией Еврохим.</p>
+    </section>
+
+    <section id="certificates">
+      <h2>Сертификаты</h2>
+      <ul>
+        <li>Дилерский сертификат CPR</li>
+        <li>Дилерский сертификат КЕЙ он</li>
+      </ul>
+    </section>
+
+    <section id="directions">
+      <h2>Направления деятельности</h2>
+
+      <h3>Поставки</h3>
+      <ul>
+        <li>Катализаторы</li>
+        <li>ВАНАДИЙ НТ</li>
+        <li>ВАНАДИЙ ВТ</li>
+        <li>Цезий</li>
+      </ul>
+
+      <h3>Оборудование</h3>
+      <p>---</p>
+
+      <h3>Проектирование</h3>
+      <p>---</p>
+
+      <h3>Сервис / Услуги</h3>
+      <ul>
+        <li>Загрузка катализатора в КА</li>
+        <li>Обследование контактного аппарата</li>
+        <li>Расчет загрузки</li>
+        <li>ТЭО по выбору технологии или процесса —</li>
+      </ul>
+    </section>
+
+    <section id="contacts">
+      <h2>Контакты</h2>
+      <p>
+        📍 Адрес: Москва, Россия<br />
+        ✉️ Почта:
+        <a href="mailto:info@heavy-engineering.ru" style="color: #fff"
+          >info@heavy-engineering.ru</a
+        ><br />
+        ☎️ Телефон: +7 (999) 123-45-67
+      </p>
+    </section>
+
+    <footer>© 2025 Heavy Engineering. Все права защищены.</footer>
+
+    <script>
+      // Плавная прокрутка по якорям
+      document.querySelectorAll('nav a').forEach((anchor) => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+    </script>
+  </body>
+</html>

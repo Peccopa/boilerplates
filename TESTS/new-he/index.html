@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 60'><path d='M10 10H30V25H55V10H75V50H55V35H30V50H10V10Z' fill='%23FFC107'/><path d='M55 9H110V20H75V25H105V35H75V40H110V51H55V10Z' fill='%23FFC107'/></svg>"
+    />
+
+    <title>Heavy Engineering</title>
+    <style>
+      :root {
+        --yellow: #ffc107;
+        --black: #000;
+        --white: #fff;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: 'Russo One', sans-serif;
+        background: var(--black);
+        color: var(--white);
+        overflow-x: hidden;
+      }
+
+      /* ============================
+         HEADER
+      ============================ */
+      .site-header {
+        background: var(--black);
+        color: var(--white);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+        z-index: 5;
+      }
+
+      .site-header__logo svg {
+        height: 45px;
+        width: auto;
+      }
+
+      .site-header__nav {
+        display: flex;
+        align-items: center;
+      }
+
+      .site-header__link {
+        color: var(--white);
+        text-decoration: none;
+        margin-left: 2rem;
+        font-weight: 500;
+        position: relative;
+        transition: color 0.3s;
+        opacity: 0;
+        animation: fadeIn 1s ease forwards;
+      }
+
+      .site-header__link:nth-child(1) {
+        animation-delay: 0.4s;
+      }
+      .site-header__link:nth-child(2) {
+        animation-delay: 0.6s;
+      }
+      .site-header__link:nth-child(3) {
+        animation-delay: 0.8s;
+      }
+
+      .site-header__link::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        height: 2px;
+        width: 0%;
+        background: var(--yellow);
+        transition: width 0.3s ease;
+      }
+
+      .site-header__link:hover {
+        color: var(--yellow);
+      }
+
+      .site-header__link:hover::after {
+        width: 100%;
+      }
+
+      /* ============================
+         MAIN
+      ============================ */
+      .site-main {
+        background: var(--yellow);
+        color: var(--black);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: calc(100vh - 140px);
+        text-align: center;
+      }
+
+      .main-content {
+        max-width: 450px;
+        padding-bottom: 2rem;
+        opacity: 0;
+        animation: fadeZoom 1.2s ease forwards;
+        animation-delay: 0.5s;
+      }
+
+      .main-content__title {
+        font-size: 3rem;
+        font-weight: 800;
+        letter-spacing: 2px;
+        line-height: 1.2;
+        padding-bottom: 0.5rem;
+        text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+      }
+
+      .main-content__text {
+        font-size: 1.1rem;
+        margin-top: 1rem;
+        opacity: 0.9;
+      }
+
+      .button {
+        display: inline-block;
+        margin-top: 2rem;
+        padding: 0.8rem 2rem;
+        background: var(--black);
+        color: var(--yellow);
+        text-decoration: none;
+        font-weight: 600;
+        border-radius: 2rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .button:hover {
+        background: var(--white);
+        color: var(--black);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+      }
+
+      /* ============================
+         FOOTER
+      ============================ */
+      .site-footer {
+        background: var(--black);
+        color: var(--white);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: 1rem 2rem;
+        box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.6);
+      }
+
+      .site-footer__link {
+        color: var(--white);
+        text-decoration: none;
+        position: relative;
+        transition: color 0.3s;
+        opacity: 0;
+        animation: fadeIn 1s ease forwards;
+      }
+
+      .site-footer__link:nth-child(1) {
+        animation-delay: 1s;
+      }
+      .site-footer__link:nth-child(2) {
+        animation-delay: 1.2s;
+      }
+      .site-footer__link:nth-child(3) {
+        animation-delay: 1.4s;
+      }
+
+      .site-footer__link::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        width: 0%;
+        height: 2px;
+        background: var(--yellow);
+        transition: width 0.3s ease;
+      }
+
+      .site-footer__link:hover {
+        color: var(--yellow);
+      }
+
+      .site-footer__link:hover::after {
+        width: 100%;
+      }
+
+      /* ============================
+         АНИМАЦИИ
+      ============================ */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeZoom {
+        0% {
+          opacity: 0;
+          transform: scale(0.95);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <a href="https://peccopa.github.io/heavy-engineering.ru/build/" class="site-header__logo">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 120 60"
+          fill="none"
+        >
+          <path
+            d="M10 10H30V25H55V10H75V50H55V35H30V50H10V10Z"
+            fill="#FFC107"
+          />
+          <path
+            d="M55 9H110V20H75V25H105V35H75V40H110V51H55V10Z"
+            fill="#FFC107"
+          />
+        </svg>
+      </a>
+      <nav class="site-header__nav">
+        <a href="#" class="site-header__link">Главная</a>
+        <a href="mailto:info@heavy-engineering.ru" class="site-header__link">Контакты</a>
+      </nav>
+    </header>
+
+    <main class="site-main">
+      <div class="main-content">
+        <h1 class="main-content__title">Heavy Engineering</h1>
+        <p class="main-content__text">
+          Инжиниринговые решения для химической и нефтехимической промышленности
+        </p>
+        <a href="mailto:info@heavy-engineering.ru" class="button">Связаться с нами</a>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <a href="#" class="site-footer__link">Главная</a>
+      <a href="#" class="site-footer__link">О нас</a>
+      <a href="mailto:info@heavy-engineering.ru" class="site-footer__link">Контакты</a>
+    </footer>
+  </body>
+</html>

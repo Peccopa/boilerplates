@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тарифы на настройку почты</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f5f5f5;
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 12px;
+        text-align: center;
+      }
+      th {
+        background-color: #4caf50;
+        color: white;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      tr:hover {
+        background-color: #ddd;
+      }
+      .package-name {
+        font-weight: bold;
+        color: #2e7d32;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Тарифы на настройку почтового домена</h1>
+
+    <table>
+      <tr>
+        <th>Пакет</th>
+        <th>Кол-во ящиков</th>
+        <th>Что включено</th>
+        <th>Время работы (часы)</th>
+        <th>Ориентировочная стоимость ₽</th>
+      </tr>
+      <tr>
+        <td class="package-name">Базовый</td>
+        <td>1–5</td>
+        <td>
+          Подключение домена, настройка MX/SPF/DKIM, 1–5 ящиков, базовое
+          тестирование, инструкция по доступу
+        </td>
+        <td>3–4</td>
+        <td>3500–4000</td>
+      </tr>
+      <tr>
+        <td class="package-name">Стандарт</td>
+        <td>6–10</td>
+        <td>
+          Всё из базового + настройка DMARC, проверка через mail-tester,
+          инструкции по Outlook/мобильным клиентам
+        </td>
+        <td>4–5</td>
+        <td>5000–6000</td>
+      </tr>
+      <tr>
+        <td class="package-name">Продвинутый</td>
+        <td>11–20</td>
+        <td>
+          Всё из стандартного + расширенные настройки безопасности (TLS,
+          антиспам, черные списки), настройка групповых ящиков/алиасов, тесты
+          GlockApps
+        </td>
+        <td>6–8</td>
+        <td>8000–10000</td>
+      </tr>
+      <tr>
+        <td class="package-name">Корпоративный / кастом</td>
+        <td>20+</td>
+        <td>
+          Полная настройка инфраструктуры, интеграция с CRM/рассылками, обучение
+          сотрудников, поддержка 1–2 недели
+        </td>
+        <td>Зависит от задач</td>
+        <td>Договорная</td>
+      </tr>
+    </table>
+
+    <h2>Дополнительные услуги</h2>
+    <ul>
+      <li>
+        Настройка отдельного почтового клиента (Outlook, Thunderbird, мобильный)
+        — 500 ₽/устройство
+      </li>
+      <li>Настройка рассылок (Mailchimp, SendGrid) — от 2000 ₽ за пакет</li>
+      <li>Дополнительный ящик сверх пакета — 300–500 ₽/ящик</li>
+      <li>Поддержка/консультации после настройки — 500 ₽/час</li>
+    </ul>
+  </body>
+</html>

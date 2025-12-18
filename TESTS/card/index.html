@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Инжиниринговая компания</title>
+    <style>
+      :root {
+        --dark-blue: #0a1f44;
+        --light-blue: #3cb3e7;
+        --gray: #f5f7fa;
+        --text-color: #222;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: 'Segoe UI', Roboto, sans-serif;
+        color: var(--text-color);
+        background: var(--gray);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      header {
+        background: var(--dark-blue);
+        color: white;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      header h1 {
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin-left: 1.5rem;
+        font-weight: 500;
+        transition: opacity 0.3s;
+      }
+
+      nav a:hover {
+        opacity: 0.8;
+      }
+
+      main {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 3rem 1rem;
+        text-align: center;
+      }
+
+      main h2 {
+        font-size: 2rem;
+        color: var(--dark-blue);
+        margin-bottom: 1rem;
+      }
+
+      main p {
+        max-width: 600px;
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+
+      footer {
+        background: var(--dark-blue);
+        color: white;
+        position: relative;
+        overflow: hidden;
+        padding: 3rem 1rem 2rem;
+        text-align: center;
+      }
+
+      footer::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80px;
+        background: var(--light-blue);
+        clip-path: polygon(0 0, 100% 100%, 0 100%);
+      }
+
+      footer .contacts {
+        position: relative;
+        z-index: 1;
+        margin-top: 2rem;
+        display: grid;
+        gap: 0.4rem;
+        justify-content: center;
+      }
+
+      footer .contacts a {
+        color: white;
+        text-decoration: none;
+        transition: opacity 0.3s;
+      }
+
+      footer .contacts a:hover {
+        opacity: 0.7;
+      }
+
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        nav {
+          margin-top: 0.5rem;
+        }
+
+        nav a {
+          margin: 0 0.5rem;
+        }
+
+        main h2 {
+          font-size: 1.6rem;
+        }
+
+        footer::before {
+          height: 60px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Инжиниринговая компания</h1>
+      <nav>
+        <a href="#">О нас</a>
+        <a href="#">Проекты</a>
+        <a href="#">Контакты</a>
+      </nav>
+    </header>
+
+    <main>
+      <h2>
+        Инжиниринговые решения для химической и нефтехимической промышленности
+      </h2>
+      <p>
+        Проектирование, поставки и внедрение технологических решений для
+        предприятий нефтехимии и химической отрасли. Мы обеспечиваем инженерную
+        точность и надёжность в каждом проекте.
+      </p>
+    </main>
+
+    <footer>
+      <div class="contacts">
+        <a href="tel:+74951234567">📞 +7 (495) 123-45-67</a>
+        <a href="tel:+74957654321">📞 +7 (495) 765-43-21</a>
+        <a href="mailto:info@company.ru">✉️ info@company.ru</a>
+        <a href="https://company.ru" target="_blank">🌐 www.company.ru</a>
+      </div>
+    </footer>
+  </body>
+</html>
